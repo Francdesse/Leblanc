@@ -48,6 +48,7 @@ Feature: Verify the sign in page opens after user clicks on orders
     Then verify that cart has 1 item
 
 
+
 #  steps:
 #  1-  go to amazon>>add search item>> click search>>verify that its shows item search in ""
   #2-  click on an item>> add it to cart>> verify its in cart
