@@ -23,6 +23,7 @@ Feature: Verify the sign in page opens after user clicks on orders
     Given Open Amazon page
     When Search for an apple mouse
     When click on the first result
+    When store item title
     When click on add to cart
     When decline coverage protection
     Then verify added to cart message
@@ -32,6 +33,7 @@ Feature: Verify the sign in page opens after user clicks on orders
     Given Open Amazon page
     When Search for an apple mouse
     When click on the first result
+    When store item title
     When click on add to cart
     When decline coverage protection
     When click on cart
@@ -47,7 +49,13 @@ Feature: Verify the sign in page opens after user clicks on orders
     When click on cart
     Then verify that cart has 1 item
 
+  Scenario: generate a loop to loop through each items
+    Given user navigate to product page B07BJKRR25
+    Then verify all items are functional
 
+  Scenario: generate a loop to verify product has an image and product name
+    Given user navigate to product page
+    Then verify all product names are present & verify all product image are present
 
 #  steps:
 #  1-  go to amazon>>add search item>> click search>>verify that its shows item search in ""

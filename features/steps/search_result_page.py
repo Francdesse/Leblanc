@@ -10,6 +10,8 @@ APPLE_MOUSE = (By.XPATH, "//div[@data-asin='B09BRD98T4']"
                                           "(@href,'/Apple-Magic-Mouse-Wireless-Re') "
                                           "and @class='a-link-normal s-underline-text"
                                           " s-underline-link-text s-link-style a-text-normal']")
+#APPLE_MOUSE_TITLE = (By.XPATH, "//span[text()='Apple Magics Mouse: Wireless, Bluetooth, Rechargeable. Works with Mac or iPad; Multi-Touch Surface - White']")
+APPLE_MOUSE_TITLE = (By.ID, "productTitle")
 
 @then('verify item is in double quotes')
 def items_are_in_double_quotation(context):
@@ -24,4 +26,7 @@ def user_click_on_search_button(context):
 
     context.driver.find_element(*APPLE_MOUSE).click()
 
-
+@when('store item title')
+def store_prod_name(context):
+    context.product_name = context.driver.find_element(*APPLE_MOUSE_TITLE).text
+    print(f'current product: {context.product_name}')
