@@ -16,7 +16,7 @@ while n>0:
 
 # Find the max number from 3 values.
 # Example: 124, 21, 32. Result = 124.
-#O(logn)
+#O(1)
 n= 0
 if n>0 and n < 50:
     print('number displayd in the min range', n)

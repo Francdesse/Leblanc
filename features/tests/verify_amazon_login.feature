@@ -57,6 +57,22 @@ Feature: Verify the sign in page opens after user clicks on orders
     Given user navigate to product page
     Then verify all product names are present & verify all product image are present
 
+
+  Scenario: User can open and close Amazon Privacy Notice
+    Given Open Amazon T&C page
+    When Store original windows
+    And Click on Amazon Privacy Notice link
+    And Switch to the newly opened window
+    Then Verify Amazon Privacy Notice page is opened
+    And close Privacy notice page
+    And switch back to original
+
+  Scenario: Go to best seller's page and verify the best seller menu open to the right pages
+    Given Open Amazon page
+    When user clicks on best sellers
+    Then verify each pages that each pases open to the right page from the menu
+
+
 #  steps:
 #  1-  go to amazon>>add search item>> click search>>verify that its shows item search in ""
   #2-  click on an item>> add it to cart>> verify its in cart
