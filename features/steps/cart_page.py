@@ -15,6 +15,7 @@ def verify_user_sees_empty_cart(context):
 
 @then('verify apple mouse is in cart')
 def User_sees_apple_mouse_in_cart(context):
+    sleep(5)
     actual_result = context.driver.find_element(*FIND_MOUSE_IN_CART).text
     assert context.product_name[:30] in actual_result, f'Error! {actual_result} is not the same as {context.product_name}'
 

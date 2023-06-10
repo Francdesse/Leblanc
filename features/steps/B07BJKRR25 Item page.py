@@ -6,8 +6,9 @@ from time import sleep
 COLOR_VARIATIONS = (By.CSS_SELECTOR, '#variation_color_name li')
 CURRENT_COLOR = (By.CSS_SELECTOR, '#variation_color_name .selection')
 @given('user navigate to product page {product_id}')
-def open_amazon_page(context, product_id):
-    context.driver.get(f'https://www.amazon.com/gp/product/{product_id}/')
+def nav_amazon_page(context, product_id):
+    #context.driver.get(f'https://www.amazon.com/gp/product/{product_id}/')
+    context.app.search_results.nav_amazon_page(product_id)
 
 
 @then ('verify all items are functional')

@@ -12,7 +12,7 @@ Feature: Verify the sign in page opens after user clicks on orders
     When click on cart
     Then cart is empty message
 
-  Scenario: verify the item is shown in ""
+  Scenario: verify the item is shown in "" #object
     Given Open Amazon page
     When search for an apple mouse
     When click search button

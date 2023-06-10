@@ -8,7 +8,7 @@ IMAGE = (By.XPATH, "//img[@class='s-image']")
 
 @given('user navigate to product page')
 def open_amazon_page(context):
-    context.driver.get(f'https://www.amazon.com/s?k=coffee')
+    context.app.search_results.open_amazon_page()
 
 @then ('verify all product names are present & verify all product image are present')
 def img_and_work_present(context):
