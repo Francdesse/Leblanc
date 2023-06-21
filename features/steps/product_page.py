@@ -21,13 +21,21 @@ def user_decline_protection(context):
     # context.driver.wait.until(EC.element_to_be_clickable(context.driver.find_element(*DECLINE_COVERAGE))).click()
     context.app.product_page.user_decline_protection()
 
+@when('close window')
+def user_X_out_ofwindow(context):
+    context.app.product_page.user_X_out_ofwindow()
 
+@when('user hover over new arrival')
+def user_hover_over_menu(context):
+    context.app.product_page.user_hover_over_menu()
 
 @then('verify added to cart message')
 def user_sees_added_to_cart_message(context):
     #context.driver.wait.until(EC.element_to_be_clickable(PROCEED_TO_CHECKOUT))
-    sleep(5)
-    expected_result = 'Added to Cart'
-    actual_result = context.driver.find_element(*ADDED_TO_CART_MESSAGE).text
-    assert expected_result == actual_result, f'Error! Expected {expected_result} but got actual {actual_result}'
+    context.app.product_page.user_sees_added_to_cart_message()
+
+@then('verify that user baby item is present')
+def baby_sec_present(context):
+    context.app.product_page.baby_sec_present()
+
 

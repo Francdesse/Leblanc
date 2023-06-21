@@ -26,9 +26,10 @@ def click_on_orders(context):
 @when('click on cart')
 def user_clicks_on_cart(context):
     # context.driver.wait.until(EC.element_to_be_clickable(PROCESS_TO_CHECKOUT_BTN))
-    # context.driver.find_element(*CLICK_ON_CART).click()
-    sleep(7)
+    sleep(3)
     context.app.header_page.user_clicks_on_cart()
+
+
 
 @when('search for an apple mouse')
 def search_for_item(context):
@@ -44,6 +45,16 @@ def user_clicks_on_search_button(context):
 
 @then('verify that cart has 1 item')
 def User_sees_1_above_cart(context):
-    expected_result = '1'
-    actual_result = context.driver.find_element(*NUMB_ABOVE_CART).text
-    assert expected_result == actual_result, f'Error! Expected {expected_result} but got actual {actual_result}'
+    # expected_result = '1'
+    # actual_result = context.driver.find_element(*NUMB_ABOVE_CART).text
+    # assert expected_result == actual_result, f'Error! Expected {expected_result} but got actual {actual_result}'
+    context.app.header_page.User_sees_1_above_cart()
+
+
+@when('Click on dropdown and choose a dept')
+def user_clicks_on_dropdown_and_choose_dep(context):
+    context.app.header_page.user_clicks_on_dropdown_and_choose_dep()
+
+@when('user search for {search_id}')
+def user_search(context, search_id):
+     context.app.header_page.user_search(search_id)

@@ -11,8 +11,6 @@ MENUE_TITLE_DESCR = (By.CSS_SELECTOR, '#zg_banner_text')
 
 @when('user clicks on best sellers')
 def user_clicks_and_open_best_seller_page(context):
-    # context.driver.wait.until(EC.element_to_be_clickable(BEST_SELLER_LINK))
-    # context.driver.find_element(*BEST_SELLER_LINK).click()
     context.app.header_page.user_clicks_and_open_best_seller_page()
 
 

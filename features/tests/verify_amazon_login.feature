@@ -19,7 +19,7 @@ Feature: Verify the sign in page opens after user clicks on orders
     Then verify item is in double quotes
 
 
-  Scenario: add item to cart and  verify that the "added to cart" message popped up
+  Scenario: add item to cart and  verify that the "added to cart" message popped up (check verify)
     Given Open Amazon page
     When Search for an apple mouse
     When click on the first result
@@ -29,15 +29,17 @@ Feature: Verify the sign in page opens after user clicks on orders
     Then verify added to cart message
 
 
-  Scenario: add item to cart and  verify the item is in cart
+  Scenario: add item to cart and  verify the item is in cart (verification again)
     Given Open Amazon page
     When Search for an apple mouse
     When click on the first result
     When store item title
     When click on add to cart
     When decline coverage protection
+    And close window
     When click on cart
     Then verify apple mouse is in cart
+    #how do I make sure the save element is being checked
 
 
   Scenario: add item to cart and  verify the item is in cart 2
@@ -46,6 +48,7 @@ Feature: Verify the sign in page opens after user clicks on orders
     When click on the first result
     When click on add to cart
     When decline coverage protection
+    And close window
     When click on cart
     Then verify that cart has 1 item
 
@@ -72,6 +75,18 @@ Feature: Verify the sign in page opens after user clicks on orders
     When user clicks on best sellers
     Then verify each pages that each pases open to the right page from the menu
 
+  Scenario: open the department list, click on a department, then verify the department
+  Given Open Amazon page
+  When Click on dropdown and choose a dept
+    And user search for xbox
+    And click search button
+  Then verify user sees video games
+
+
+  Scenario: go to amazon and hover over new arrivals
+  Given user navigate to product page B074TBCSC8
+  When user hover over new arrival
+  Then verify that user baby item is present
 
 #  steps:
 #  1-  go to amazon>>add search item>> click search>>verify that its shows item search in ""
