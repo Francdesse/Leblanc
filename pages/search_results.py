@@ -12,7 +12,7 @@ class SearchResults(Page):
     SEARCH_RESULTS = (By.CSS_SELECTOR, '.sg-col-inner [data-component-type= "s-search-result"]')
     ITEM_TITLES = (By.XPATH, ".//span[@class='a-size-base-plus a-color-base a-text-normal']")
     IMAGE = (By.XPATH, "//img[@class='s-image']")
-    VIDEO_GAME = (By.CSS_SELECTOR, '[data-category="videogames"]')
+    VIDEO_GAME = (By.CSS_SELECTOR, '[aria-label="Video Games"]')
 
     def items_are_in_double_quotation(self):
         actual_text = self.find_element(*self.KEYWORD_SEARCH_IN_DOUBLE_QUOTE).text

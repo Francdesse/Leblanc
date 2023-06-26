@@ -5,13 +5,34 @@ from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from app.application import Application
 
-def browser_init(context):
+def browser_init(context, test_name):
     """
     :param context: Behave context
     """
-    driver_path = ChromeDriverManager().install()
-    service = Service(driver_path)
-    context.driver = webdriver.Chrome(service=service)
+
+    #CONNECTING TO CHROME
+    # driver_path = ChromeDriverManager().install()
+    # service = Service(driver_path)
+    # context.driver = webdriver.Chrome(service=service)
+
+    #CONNECTING TO FIREFOX
+    #context.driver = webdriver.Firefox(executable_path='/Users/francdelmonde/QA/python-selenium-automation/geckodriver')
+
+    #CONNECTING TO SAFARI
+    #context.driver = webdriver.Safari()
+
+    print(f"Test Name {test_name}")
+    #### BROWSERSTACK ####
+    desired_cap = {
+        'browser': 'Chrome',
+        'os_version': '11',
+        'os': 'Windows',
+        'sessionName': test_name
+    }
+    bs_user = 'francyoudesse_ZgwiS3'
+    bs_key = '2wpdUvU3UwJTPzAvuqM2'
+    url = f'http://{bs_user}:{bs_key}@hub-cloud.browserstack.com/wd/hub'
+    context.driver = webdriver.Remote(url, desired_capabilities=desired_cap)
 
     context.driver.maximize_window()
 
@@ -22,11 +43,15 @@ def browser_init(context):
     context.app = Application(context.driver)
 def before_scenario(context, scenario):
     print('\nStarted scenario: ', scenario.name)
-    browser_init(context)
+    browser_init(context, scenario.name)
 
 
 def before_step(context, step):
     print('\nStarted step: ', step)
+
+def after_step(context, step):
+    if step.status == 'failed':
+        print('\nStep failed: ', step)
 
 
 def after_step(context, step):

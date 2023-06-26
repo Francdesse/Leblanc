@@ -16,4 +16,4 @@ def store_prod_name(context):
 
 @then('verify user sees video games')
 def user_sees_video_games(context):
-    pass
+    context.app.search_results.user_sees_video_games()
