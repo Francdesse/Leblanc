@@ -13,6 +13,9 @@ class SearchResults(Page):
     ITEM_TITLES = (By.XPATH, ".//span[@class='a-size-base-plus a-color-base a-text-normal']")
     IMAGE = (By.XPATH, "//img[@class='s-image']")
     VIDEO_GAME = (By.CSS_SELECTOR, '[aria-label="Video Games"]')
+    COFFE_SELECTION = (By.XPATH, '//span[@data-component-type="s-search-results"]//div[@cel_widget_id="MAIN-SEARCH_RESULTS-3"]//h2[@class="a-size-mini a-spacing-none a-color-base s-line-clamp-3"]')
+
+
 
     def items_are_in_double_quotation(self):
         actual_text = self.find_element(*self.KEYWORD_SEARCH_IN_DOUBLE_QUOTE).text
@@ -41,3 +44,8 @@ class SearchResults(Page):
 
     def user_sees_video_games(self):
         self.verify_element_text('Video Games', *self.VIDEO_GAME)
+
+    def user_clicks_on_item(self):
+        self.click(*self.COFFE_SELECTION)
+        print(*self.COFFE_SELECTION)
+

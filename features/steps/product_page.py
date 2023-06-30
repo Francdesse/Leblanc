@@ -23,12 +23,20 @@ def user_X_out_ofwindow(context):
 def user_hover_over_menu(context):
     context.app.product_page.user_hover_over_menu()
 
+@when('click on One time payment')
+def user_clicks_one_time_payment(context):
+    context.app.product_page.user_clicks_one_time_payment()
+
 @then('verify added to cart message')
 def user_sees_added_to_cart_message(context):
     context.app.product_page.user_sees_added_to_cart_message()
 
+
+
 @then('verify that user baby item is present')
 def baby_sec_present(context):
     context.app.product_page.baby_sec_present()
+
+
 
 

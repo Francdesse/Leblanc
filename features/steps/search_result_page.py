@@ -14,6 +14,11 @@ def user_click_on_search_button(context):
 def store_prod_name(context):
     context.app.product_page.store_prod_name()
 
+@when('click on an item')
+def user_clicks_on_item(context):
+    context.app.search_results.user_clicks_on_item()
 @then('verify user sees video games')
 def user_sees_video_games(context):
     context.app.search_results.user_sees_video_games()
+
+

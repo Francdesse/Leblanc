@@ -88,6 +88,18 @@ Feature: Verify the sign in page opens after user clicks on orders
   When user hover over new arrival
   Then verify that user baby item is present
 
+
+  Scenario: adding cofee to cart
+  Given Open Amazon page
+    When search coffee
+    And click search button
+    And click on an item
+   # And click on One time payment
+    And click on add to cart
+#    And click on add to cart
+#  Then verify that cart has 1 item
+
+
 #  steps:
 #  1-  go to amazon>>add search item>> click search>>verify that its shows item search in ""
   #2-  click on an item>> add it to cart>> verify its in cart

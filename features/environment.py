@@ -11,9 +11,9 @@ def browser_init(context, test_name):
     """
 
     #CONNECTING TO CHROME
-    # driver_path = ChromeDriverManager().install()
-    # service = Service(driver_path)
-    # context.driver = webdriver.Chrome(service=service)
+    driver_path = ChromeDriverManager().install()
+    service = Service(driver_path)
+    context.driver = webdriver.Chrome(service=service)
 
     #CONNECTING TO FIREFOX
     #context.driver = webdriver.Firefox(executable_path='/Users/francdelmonde/QA/python-selenium-automation/geckodriver')
@@ -21,18 +21,32 @@ def browser_init(context, test_name):
     #CONNECTING TO SAFARI
     #context.driver = webdriver.Safari()
 
-    print(f"Test Name {test_name}")
-    #### BROWSERSTACK ####
-    desired_cap = {
-        'browser': 'Chrome',
-        'os_version': '11',
-        'os': 'Windows',
-        'sessionName': test_name
-    }
-    bs_user = 'francyoudesse_ZgwiS3'
-    bs_key = '2wpdUvU3UwJTPzAvuqM2'
-    url = f'http://{bs_user}:{bs_key}@hub-cloud.browserstack.com/wd/hub'
-    context.driver = webdriver.Remote(url, desired_capabilities=desired_cap)
+    # print(f"Test Name {test_name}")
+    # #### BROWSERSTACK ####
+    # chrome_options = webdriver.ChromeOptions()
+    # bstack_options = {
+    #     "osVersion": 'Big Sur',
+    #     "buildName": 'test',
+    #     "sessionName": 'test_name'
+    #                  }
+    # chrome_options.set_capability('bstack:options', bstack_options)
+    #
+    #
+    #
+    #
+    #
+    # # desired_cap = {
+    # #     'os': 'OS X',
+    # #     'osVersion': 'Big Sur',
+    # #     'browserName': 'Chrome',
+    # #     'browserVersion': 'latest',
+    # #     'sessionName': 'test_name'
+    # # }
+    # bs_user = ''
+    # bs_key = ''
+    # url = f'http://{bs_user}:{bs_key}@hub-cloud.browserstack.com/wd/hub'
+    # #context.driver = webdriver.Remote(url, desired_capabilities=desired_cap)
+    # context.driver = webdriver.Remote(command_executor=url, options=chrome_options)
 
     context.driver.maximize_window()
 

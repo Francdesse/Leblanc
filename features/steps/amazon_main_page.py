@@ -43,3 +43,8 @@ def user_clicks_on_dropdown_and_choose_dep(context):
 @when('user search for {search_id}')
 def user_search(context, search_id):
      context.app.header_page.user_search(search_id)
+
+@when('search {search_ID}')
+def user_search_for_cofee(context, search_ID):
+    context.app.header_page.user_search_for_cofee(search_ID)
+

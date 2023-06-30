@@ -13,6 +13,7 @@ class ProductPage(Page):
     CLOSE_PROD_BOX = (By.ID, 'attach-close_sideSheet-link')
     NEW_ARRIVAL = (By.CSS_SELECTOR, '#nav-subnav [href*="/New-Arrivals"]')
     BABY_SUB_MENU = (By.CSS_SELECTOR, '[href*="/s?i=fashion-baby"]')
+    ONE_TIME_PAYMENT = (By.ID, 'newAccordionCaption_feature_div')
     def user_add_item_to_cart(self):
         self.click(*self.CLICKING_ON_ADD_TO_CART)
 
@@ -58,3 +59,5 @@ class ProductPage(Page):
     def baby_sec_present(self):
         self.wait_for_element_appear(*self.BABY_SUB_MENU)
 
+    def user_clicks_one_time_payment(self):
+        self.click(*self.ONE_TIME_PAYMENT)

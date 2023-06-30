@@ -42,3 +42,5 @@ class Header(Page):
     def user_search(self, search_id):
         self.input_text(search_id, *self.SEARCH_BOX)
 
+    def user_search_for_cofee(self, search_ID):
+        self.input_text(search_ID, *self.SEARCH_BOX)
