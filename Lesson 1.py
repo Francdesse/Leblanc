@@ -23,7 +23,13 @@ driver.find_element(By.ID, "continue").click()
 sleep(5)
 # finding elemment with short xpath
 driver.find_element(By.XPATH,"//i[@class='a-icon a-icon-logo']" ).click()
-print('complete')
+
 sleep(8)
 # finding elemment with contains
 driver.find_element(By.XPATH, "//a[contains(@href, 'ref=ap_signin_notification_condition_of_use?')]").click()
+sleep(8)
+driver.find_element(By.XPATH, "//a[contains (@href,'html/ref=ap_signin_notification_privacy_notice?')]").click()
+#finding element by text
+sleep(8)
+driver.find_element(By.XPATH, "//span[contains(text(), 'Need help?')]").click
+print('complete')
