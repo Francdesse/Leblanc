@@ -18,7 +18,12 @@ driver.get("https://www.amazon.com/ap/signin?openid.pape.max_auth_age=0&openid."
 
 driver.find_element(By.ID,"ap_email").send_keys("francyoudesse@icloud.com")
 sleep(5)
+# finding elemment with ID
 driver.find_element(By.ID, "continue").click()
 sleep(5)
+# finding elemment with short xpath
 driver.find_element(By.XPATH,"//i[@class='a-icon a-icon-logo']" ).click()
 print('complete')
+sleep(8)
+# finding elemment with contains
+driver.find_element(By.XPATH, "//a[contains(@href, 'ref=ap_signin_notification_condition_of_use?')]").click()
