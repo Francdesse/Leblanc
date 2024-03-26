@@ -8,8 +8,8 @@ def user_launch_amazon(context):
     context.driver.get("https://amazon.com")
 
 
-@when('user search for coffee')
-def user_search_coffee(context):
+@when('user search for {search_word}')
+def user_search_coffee(context, search_word):
     context.driver.find_element(By.ID, "twotabsearchtextbox").send_keys("coffee")
 
 
@@ -21,12 +21,11 @@ def user_search_button(context):
 sleep(5)
 
 
-@then('verify that user sees "coffee"')
-def verify_coffee(context):
-    expected = '"coffee"'
+@then('verify that user sees {expected_result}')
+def verify_coffee(context, expected_result):
     actual = context.driver.find_element(By.CSS_SELECTOR, '.a-color-state.a-text-bold').text
 
-    assert expected == actual, f'expected search "{expected}" but got {actual}'
+    assert expected_result == actual, f'expected search "{expected}" but got {actual}'
 
 
 print('complete')
