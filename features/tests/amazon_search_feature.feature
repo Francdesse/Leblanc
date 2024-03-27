@@ -7,3 +7,8 @@ Feature: amazon search feature
     When user search for coffee
     And user clicks on search button
     Then verify that user sees "coffee"
+
+  Scenario: verify the cart empty message
+    Given user launch amazon site
+    When user clicks on cart
+    Then verify Your Amazon Cart is empty message
