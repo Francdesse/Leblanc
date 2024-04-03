@@ -12,3 +12,9 @@ Feature: amazon search feature
     Given user launch amazon site
     When user clicks on cart
     Then verify Your Amazon Cart is empty message
+
+  Scenario: verify that user sees the login popup login box
+    Given user launch amazon site
+    When verify that the login popup box comes up
+    When user click on signin popup
+    Then verify that user is in the sign in page
