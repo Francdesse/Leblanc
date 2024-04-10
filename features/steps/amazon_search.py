@@ -13,7 +13,11 @@ SIGN_IN_TEXT = (By.CSS_SELECTOR,'#continue.a-button.a-button-primary')
 
 @given('user launch amazon site')
 def user_launch_amazon(context):
-    context.driver.get("https://amazon.com")
+    context.driver.get("https://www.amazon.com/ap/signin?openid.pape.max_auth_age=0&openid.return_"
+                       "to=https%3A%2F%2Fwww.amazon.com%2Ffmc%2Flearn-more%3Fref_%3Dnav_signin&openid.ident"
+                       "ity=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.assoc_handle=usfle"
+                       "x&openid.mode=checkid_setup&openid.claimed_id=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fid"
+                       "entifier_select&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0")
 
 
 @when('user search for {search_word}')
@@ -47,9 +51,6 @@ def verify_coffee(context, expected_result):
     actual = context.driver.find_element(By.CSS_SELECTOR, '.a-color-state.a-text-bold').text
 
     assert expected_result == actual, f'expected search "{expected_result}" but got {actual}'
-
-
-
 
 
 @then('verify that user is in the sign in page')

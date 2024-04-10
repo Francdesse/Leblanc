@@ -18,3 +18,12 @@ Feature: amazon search feature
     When verify that the login popup box comes up
     When user click on signin popup
     Then verify that user is in the sign in page
+
+  Scenario: verify when user clicks on conditions of use that it opens on a seperate window
+    Given user launch amazon site
+    And store original window
+    When user clicks on conditions of use
+    And switch to new window
+    Then verify the condition page is open
+    And close conditions page
+    And return to original window
