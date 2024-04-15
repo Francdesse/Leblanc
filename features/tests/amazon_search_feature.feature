@@ -19,7 +19,7 @@ Feature: amazon search feature
     When user click on signin popup
     Then verify that user is in the sign in page
 
-  Scenario: verify when user clicks on conditions of use that it opens on a seperate window
+  Scenario: verify when user clicks on conditions of use that it opens on a separate window
     Given user launch amazon site
     And store original window
     When user clicks on conditions of use

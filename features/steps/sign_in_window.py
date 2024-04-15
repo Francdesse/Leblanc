@@ -9,19 +9,19 @@ CONDITIONS_OF_USE = (By.XPATH, "//a[@href='/gp/help/customer/display.html/ref=ap
 
 @given("store original window")
 def store_original_window(context):
-    context.current_window = context.driver.current_window_handle
-    print(context.current_window)
+    context.original_window = context.driver.current_window_handle
+    print(context.original_window)
 
 
 @when("user clicks on conditions of use")
 def clicking_on_conditions_of_use(context):
     context.driver.find_element(*CONDITIONS_OF_USE).click()
 
-    sleep(2)
+    #sleep(2)
 
 
 @when("switch to new window")
 def switch_to_new_window(context):
-    context.driver.wait_until(EC.new_window_is_opened)
+    context.driver.wait.until(EC.new_window_is_opened)
     windows = context.driver.window_handles
     context.driver.switch_to.window(windows[1]) #switching to the second window
