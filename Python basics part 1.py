@@ -3,10 +3,6 @@
 # the next char can be anything: lower and upper case letters, numbers, and char
 
 
-
-
-
-
 a = 100
 b = 12
 c = a*b
@@ -20,3 +16,41 @@ if a < 12:
 
 else:
     print('a is not less 12')
+
+
+#10/24/2024
+#keywords: are variables which are reserved by the programing language
+# ex: elif, else, for, if and so on there are 35 in total
+
+#finding type
+a = 100
+b = 12.0
+c = 'welcome'
+
+print(type(a))
+print(type(b))
+print(type(c))
+
+
+""" 
+Data types:
+numeric: int, float, and complex
+text - string ex "test"
+boolean - true and false
+map - dictionary
+set - set and frozenset
+binary - bytes, bytearray, memoryview
+"""
+
+
+
+
+
+
+
+
+
+
+
+
+
