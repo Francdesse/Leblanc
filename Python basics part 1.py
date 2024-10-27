@@ -41,23 +41,78 @@ map - dictionary
 set - set and frozenset
 binary - bytes, bytearray, memoryview
 """
-
+from tkinter.font import names
 
 #10/25/2024
 
 #what is your age? using formating:
 
-Age = 24
-Name = 'Franc'
-Location = 'PA'
+# Age = 24
+# Name = 'Franc'
+# Location = 'PA'
+#
+# print(f'Hello, my name is {Name}, I am {Age}, and I am located in {Location}')
+#
+# print(Name.upper())
+# print(Name.lower())
+# print(len(Location))
 
-print(f'Hello, my name is {Name}, I am {Age}, and I am located in {Location}')
+#10/26/24
+# Arithmetic and relational
 
-print(Name.upper())
-print(Name.lower())
-print(len(Location))
+# a = 2
+# b = 5
+#
+# print(a+b) #addition
+# print(a-b)  #subtraction
+# print(a/b) #divition
+# print(a*b) #multiplication
+# print(a%b) #modulus
+# print(a//b) #floor division
+# print(a**b) #exponential
 
+#comparison values
+# a = 2
+# b = 5
+#
+# print(a>b)
+# print(a>=b)
+# print(a<b)
+# print(a<=b)
 
+#equal to operator
+# a = 2
+# b = 5
+#
+# print(a==b)
+# print(a!=b)
+
+#Logical statement
+a = 2
+b = 9
+
+if a == b and b==a:
+    print('hello')
+elif a>b or b>a:
+    print('hi')
+else:
+    print('try again')
+
+name = input("enter your first name: ")
+last_name = input("enter your last name: ")
+age = int(input('how old are you: '))
+print(f'your first name is {name}, and your last name is {last_name}')
+
+if age <9:
+    print('you are a baby')
+elif age >=10 and age <=19:
+    print('you are in your teens')
+elif age >=20 and age <=49:
+    print('you are an adult and ready for the world')
+elif age >= 50 and age <=70:
+    print('you are an adult with a family, and making big impact to the youth')
+else:
+    print("you're old!")
 
 
 
