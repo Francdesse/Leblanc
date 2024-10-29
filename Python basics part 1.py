@@ -88,32 +88,42 @@ from tkinter.font import names
 # print(a!=b)
 
 #Logical statement
-a = 2
-b = 9
+# a = 2
+# b = 9
+#
+# if a == b and b==a:
+#     print('hello')
+# elif a>b or b>a:
+#     print('hi')
+# else:
+#     print('try again')
+#
+# name = input("enter your first name: ")
+# last_name = input("enter your last name: ")
+# age = int(input('how old are you: '))
+# print(f'your first name is {name}, and your last name is {last_name}')
+#
+# if age <9:
+#     print('you are a baby')
+# elif age >=10 and age <=19:
+#     print('you are in your teens')
+# elif age >=20 and age <=49:
+#     print('you are an adult and ready for the world')
+# elif age >= 50 and age <=70:
+#     print('you are an adult with a family, and making big impact to the youth')
+# else:
+#     print("you're old!")
 
-if a == b and b==a:
-    print('hello')
-elif a>b or b>a:
-    print('hi')
-else:
-    print('try again')
+#10/28/24
+#flow control
+#
+# for loop
 
-name = input("enter your first name: ")
-last_name = input("enter your last name: ")
-age = int(input('how old are you: '))
-print(f'your first name is {name}, and your last name is {last_name}')
+# sequence = "Test"
+# r = 0
+# for a in sequence:
+#     print(a, r)
+#     r=r+1
 
-if age <9:
-    print('you are a baby')
-elif age >=10 and age <=19:
-    print('you are in your teens')
-elif age >=20 and age <=49:
-    print('you are an adult and ready for the world')
-elif age >= 50 and age <=70:
-    print('you are an adult with a family, and making big impact to the youth')
-else:
-    print("you're old!")
-
-
-
-
+for x in range(1,10,2):
+    print(x)
