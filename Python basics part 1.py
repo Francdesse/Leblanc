@@ -125,5 +125,28 @@ from tkinter.font import names
 #     print(a, r)
 #     r=r+1
 
-for x in range(1,10,2):
-    print(x)
+# for x in range(1,10,2):
+#     print(x)
+
+# x=0
+# test=5
+# for i in range (test):
+#     print(test,x)
+#     x=x+1
+
+#input example
+
+# n= int(input('enter a number: '))
+# x = 0
+# for i in range(1,n):
+#     x = x + 1
+#     print(f'you entered {n} and {n} * {x} =', i*n)
+
+#printing even number
+
+for i in range(10):
+    if i%2 != 0:
+        print('these are odd numbers: ',i)
+        if i == 5:
+            break
+
