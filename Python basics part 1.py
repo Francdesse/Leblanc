@@ -144,9 +144,20 @@ from tkinter.font import names
 
 #printing even number
 
-for i in range(10):
-    if i%2 != 0:
-        print('these are odd numbers: ',i)
-        if i == 5:
-            break
+# for i in range(10):
+#     if i%2 != 0:
+#         print('these are odd numbers: ',i)
+#         if i == 5:
+#             break
+#
 
+#10/31/24
+#Datatypes: List
+
+a =[] #empty list
+b = [1,2.3, 'TEST', True, 3+2j]
+print(type(b))
+print(b)
+
+emp = ['test', 102, 'usa']
+print(f"this is a {emp[0]}, i'm {emp[1]}, i' am from the {emp[1]}")
