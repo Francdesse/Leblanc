@@ -153,11 +153,21 @@ from tkinter.font import names
 
 #10/31/24
 #Datatypes: List
+#
+# a =[] #empty list
+# b = [1,2.3, 'TEST', True, 3+2j]
+# print(type(b))
+# print(b)
+#
+# emp = ['test', 102, 'usa']
+# print(f"this is a {emp[0]}, i'm {emp[1]}, i' am from the {emp[1]}")
 
-a =[] #empty list
-b = [1,2.3, 'TEST', True, 3+2j]
-print(type(b))
-print(b)
+#11/1/24 list openations:
+#repetition
+li = [1,2,3,"test",True]
+print(li*2) #repeats the same list
 
-emp = ['test', 102, 'usa']
-print(f"this is a {emp[0]}, i'm {emp[1]}, i' am from the {emp[1]}")
+#concatination:
+l1 = [1,2,3,"test",True]
+l2 = [4,5,6,"test",True]
+print(l1+l2)
