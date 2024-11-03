@@ -199,3 +199,9 @@ from tkinter.font import names
 #         print('try again, you are not part of our membership')
 #     break
 
+# the sum of x
+b=0
+x =[1,2,3,4,5]
+for i in x:
+    b= b+i
+    print(b)
