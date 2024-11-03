@@ -163,11 +163,39 @@ from tkinter.font import names
 # print(f"this is a {emp[0]}, i'm {emp[1]}, i' am from the {emp[1]}")
 
 #11/1/24 list openations:
-#repetition
-li = [1,2,3,"test",True]
-print(li*2) #repeats the same list
+# #repetition
+# li = [1,2,3,"test",True]
+# # print(li*2) #repeats the same list
+# #
+# # #concatination:
+# # l1 = [1,2,3,"test",True]
+# # l2 = [4,5,6,"test",True]
+# # print(l1+l2)
+#
+# print(li[0:]) # 0 to last value
+# print(li[2:]) # from 2 to the last value
+# print(li[::-1]) # reverse the list
+# print(li[:4]) # print from 0 to the 3 not the 4th
+# print(li[0:4:2])
 
-#concatination:
-l1 = [1,2,3,"test",True]
-l2 = [4,5,6,"test",True]
-print(l1+l2)
+#checks if name is in the list| if not ask the user to be part of the list then welcomes them,
+# if not then tell them they choose to not be part of the list
+# mem = ['john', 'josh','mat','ryan']
+# age = [18, 20, 25, 30]
+#
+# name = input("enter your name: ")
+# #age_ = input("enter your age: ")
+# for i in name:
+#     if name in mem:
+#         print('you are a valid member')
+#     elif name not in mem:
+#         response = input('you are not part of our club, would you like to be added to our list? (yes/no): ')
+#         if response == 'yes':
+#             mem.append(input("enter your name: "))
+#             print(f'Hello {name} you have been added to our list, welcome to our club')
+#         else:
+#             print('you have selected to not be part of our membership')
+#     else:
+#         print('try again, you are not part of our membership')
+#     break
+
