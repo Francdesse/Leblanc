@@ -199,9 +199,32 @@ from tkinter.font import names
 #         print('try again, you are not part of our membership')
 #     break
 
-# the sum of x
-b=0
-x =[1,2,3,4,5]
-for i in x:
-    b= b+i
-    print(b)
+# # the sum of x
+# b=0
+# x =[1,2,3,4,5]
+# for i in x:
+#     b= b+i
+#     print(b)
+#
+#11/7/24: set
+
+# s1 = {'test','robert', 1,1.1}
+# #print(len(s1))
+# s1.add('level1')
+# print(s1)
+# for i in s1:
+#     print(i)
+
+# def print_my_name():
+#     print("my name is franc")
+
+
+# def print_my_name_(name):
+#     print(f"my name is {name}")
+# print_my_name_("franc")
+
+#using multiple parameters:
+
+def _print_my_name_(name,location, work, zip_code):
+    print(f"my name is {name} I am located in {location}, I work as a {work} and my zip code is {zip_code}")
+_print_my_name_("franc","EU","programmer",12345)
