@@ -1,8 +1,16 @@
 # starting over 1/27/25
 from operator import ifloordiv
 
-a = "teddy"
-print(a.upper())
-print(a.lower())
-print(a.title())
+# a = "teddy"
+# print(a.upper())
+# print(a.lower())
+# print(a.title())
+
+a = 5
+b = 6
+print(a+b)
+print(a-b)
+print(a*b)
+print(a/b)
+print(a//b)
 
