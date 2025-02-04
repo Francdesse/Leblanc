@@ -14,3 +14,6 @@ print(a*b)
 print(a/b)
 print(a//b)
 
+#2.3.25
+# #learning about bitsor and we dont use them in real life
+#shift operator
