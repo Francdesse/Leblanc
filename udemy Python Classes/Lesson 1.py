@@ -57,9 +57,35 @@ from operator import ifloordiv
 # for i in range(1, 11):
 #     print(n, "*" , i , "=" , n*i)
 
-#finding the sum of a list
-list = eval(input('enter a list of numbers'))
-sum = 0
-for i in list:
-    sum = sum + i
-print(sum)
+# #finding the sum of a list
+# list = eval(input('enter a list of numbers'))
+# sum = 0
+# for i in list:
+#     sum = sum + i
+# print(sum)
+
+#2.5.25
+# break statement
+# for i in range(10):
+#     if i == 5:
+#         print(i)
+#         break
+#     print(i)
+# print('outsite of the look')
+
+#continue statement
+for i in range(10):
+    if i%2 == 0:
+        print('even number',i)
+        continue
+    print('odd number ',i)
+
+
+
+
+
+
+
+
+
+
