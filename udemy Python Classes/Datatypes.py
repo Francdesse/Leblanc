@@ -32,6 +32,29 @@ b = [9,6,8, 9.9]
 # print(a)
 
 #repeating list
-print(a*2)
-print(a+b)
-print(min([a]))
+# print(a*2)
+# print(a+b)
+# print(min([a]))
+
+"""
+Dictionary:
+key and value pair
+    1. key - numbers, string, tuple
+    2. value - python objects
+    EX:
+"""
+# d1 = {
+#     "name": "testing",
+#     "age": 20,
+#     "workplace": "healthcare",
+#     "location": "remotely"
+#     }
+# print(f"my name is {d1['name']}, I am {d1['age']} years old, I work in {d1['workplace']} {d1['location']}")
+
+#Example of dictionary with a list
+d2 = {
+    "cars": ["tesla","ford", "nissan"],
+    "price": [100000, 200000, 300000],
+    "color": "red"
+    }
+print(d2["cars"] [2])
