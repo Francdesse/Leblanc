@@ -1,23 +1,23 @@
 from selenium import webdriver
 from selenium.webdriver.common.by import By
-from time import sleep
+from selenium.webdriver.support import expected_conditions as EC
+from selenium.webdriver.support.expected_conditions import presence_of_element_located
 from selenium.webdriver.support.wait import WebDriverWait
-from selenium.webdriver.support import expected_conditions as EC, wait
 
 driver = webdriver.Chrome()
-driver.get("https://google.com")
+driver.get("https://www.amazon.com/ref=nav_bb_logo")
 
 driver.maximize_window()
+search_bar = (By.ID, "twotabsearchtextbox")
+search_btn = (By.ID, "nav-search-submit-button")
 
-driver.find_element(By.CSS_SELECTOR, "#APjFqb").send_keys("tesla model s")
-#driver.implicitly_wait(3)
-test = wait.until(EC.element_to_be_clickable(By.XPATH, "/html/body/div[1]/div[3]/form/div[1]/div[1]/div[3]/center/input[1]"))
 
-#sleep(3)
-driver.find_element(By.XPATH, "/html/body/div[1]/div[3]/form/div[1]/div[1]/div[3]/center/input[1]").click()
-driver.implicitly_wait(5)
+
+driver.find_element(*search_bar).send_keys("protein bars")
+driver.find_element(*search_btn).click()
+
+wait = WebDriverWait(driver, 10)
 
 """
-    Make this work. To be continue
-
+    Handling dropdown list
 """
