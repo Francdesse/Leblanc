@@ -1,92 +1,27 @@
-# starting over 1/27/25
-from operator import ifloordiv
+#print('hello')
 
-# a = "teddy"
-# print(a.upper())
-# print(a.lower())
-# print(a.title())
+# a = 10
+# print(a)
+# age_1 = 99
+#
 
-# a = 5
-# b = 6
-# print(a+b)
-# print(a-b)
-# print(a*b)
-# print(a/b)
-# print(a//b)
+# if age_1 <= 20:
+#     print('teenager')
+# elif age_1 > 20 and age_1 <= 40:
+#     print('adulter')
+# elif age_1 > 40:
+#     print('old')
 
-#2.3.25
-# #learning about bitsor and we dont use them in real life
-#shift operator
+# name = input('what is your name?')
+# print(f"my name is: {name}")
 
-#2/4/25
-# floor control
-# if statements,
-# if else statements,
-# if elif statements
-# for loops
-# while loops
-# while loops
-# nested loops
-# break statement
-# continue statement
-# loops with else block
-# pass statement
-
-# if statements,
-# if else statements,
-# if elif statements
-
-# a = int(input('enter a number from a to infinity '))
-# b = int(input('enter second number from a to infinity '))
-# if a > b:
-#     print(f'{a} is greater than {b}')
-# else:
-#     print(f'{b} is greater than {a}')
-
-# For loop
-# syntax: for x in sequence
-#             statement
-
-# x= 'sequence'
-# i=0
-# for b in x:
-#     print(i, b)
-#     i=i+1
-
-# n = int(input('enter a number '))
-# for i in range(1, 11):
-#     print(n, "*" , i , "=" , n*i)
-
-# #finding the sum of a list
-# list = eval(input('enter a list of numbers'))
-# sum = 0
-# for i in list:
-#     sum = sum + i
-# print(sum)
-
-#2.5.25
-# break statement
-# for i in range(10):
-#     if i == 5:
-#         print(i)
-#         break
-#     print(i)
-# print('outsite of the look')
-
-#continue statement
-# for i in range(10):
-#     if i%2 == 0:
-#         print('even number',i)
-#         continue
-#     print('odd number ',i)
-
-# List
+#
+# txt = 'good morning joe'
+#
+# if 'night' not in txt:
+#     print('not in txt, try gain')
 
 
-
-
-
-
-
-
-
+age= 30
+city = "new york"
+print(f'Hello, I am {age} years old. and I live in {city}')
