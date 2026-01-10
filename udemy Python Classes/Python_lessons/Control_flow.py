@@ -23,6 +23,42 @@
 -----------------------------------------------------------
 For loops
 '''
-a = 12
-for i in range(a+2):
-    print(i, a)
+# # range
+# a = 6
+# sum = 0
+# # for i in range(1,a):
+# #     sum=i*a
+# #     print(sum,i)
+# #
+# # # lets do it again with a while loop
+# i=1
+# while i < a:
+#     sum = a * i
+#     i = i + 1
+#     print(sum, i)
+
+'''
+-----------------------------------------------------------
+Break statements
+'''
+
+# for i in range(1, 10):
+#     if i == -5:
+#         print("Found it!")
+#         break
+#     else :
+#         print(i)
+#     continue
+
+'''
+-----------------------------------------------------------
+finding even and odd numbers
+'''
+
+for i in range(1, 10):
+    if i % 2 == 0:
+        print(f"{i} is even")
+        continue
+    else:
+        print(f" {i} is odd")
+    # continue
