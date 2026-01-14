@@ -21,12 +21,16 @@
 # print(comp)
 
 # Dictionary
+#
+# client = {
+#             "name": input("Enter your name: "),
+#             "age": int(input("Enter your age: ")),
+#             "job": input("Enter your job title: ")
+# }
+# print(client)
+# del client["age"]
+# print(client)
 
-client = {
-            "name": input("Enter your name: "),
-            "age": int(input("Enter your age: ")),
-            "job": input("Enter your job title: ")
-}
-print(client)
-del client["age"]
-print(client)
+# t1 = ("as", 1,3.5)
+# t1.remove("as")
+# print(t1)
