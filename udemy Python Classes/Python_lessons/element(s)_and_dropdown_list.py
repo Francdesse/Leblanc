@@ -15,26 +15,37 @@ driver = webdriver.Safari()
 
 driver.maximize_window()
 sleep(2)
-driver.get("https://www.wikipedia.org")
+driver.get("https://www.google.com")
 sleep(2)
 
 title = driver.title
 print(title)
 
 sleep(2)
-
-#getting the dropdown list
-search_bar = WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.ID, 'searchInput')))
-
+ai_btn = driver.find_element(by='xpath', value='//div//span[contains (text(), "AI Mode")]').text
 sleep(2)
-
-#printing the list of names from a dropdown list
-option_list = driver.find_element(By.XPATH, '//*[@id="search-input"]/div[1]/div')
-options = option_list.find_elements(By.TAG_NAME, 'option')
-for option in options:
-    print(option.text)
-
-print('the length count of this list is ', len(options))
-
+driver.find_element(by='xpath', value='//div//span[contains (text(), "AI Mode")]').click()
+assert 'AI Mode' in ai_btn, 'AI Mode button is not working'
+sleep(2)
+#
+# #getting the dropdown list
+# search_bar = WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.ID, 'searchInput')))
+#
+# sleep(2)
+#
+# #printing the list of names from a dropdown list
+# option_list = driver.find_element(By.XPATH, '//*[@id="search-input"]/div[1]/div')
+# options = option_list.find_elements(By.TAG_NAME, 'option')
+# for option in options:
+#     print(option.text)
+#
+# print('the length count of this list is ', len(options))
+#
+# """
+# Learning finding Elements
+#
+# """
+#
+#
 
 driver.quit()
