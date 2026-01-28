@@ -1,4 +1,5 @@
 #check back with Carrerist on find elements and dropdown lists selections
+# 26254624 | Practicing Xpath variations
 
 from selenium import webdriver
 from selenium.webdriver.support import expected_conditions as EC #allows you to use different wait locators
@@ -7,7 +8,7 @@ from selenium.webdriver.common.by import By #allows you to use different locator
 from selenium.webdriver.common.keys import Keys #allows you to use keyboard shortcuts
 from selenium.webdriver.support.wait import WebDriverWait
 
-driver = webdriver.Safari()
+driver = webdriver.Chrome()
 
 # options = webdriver.SafariOptions()
 # driver = webdriver.Safari(options=options) #keep in the background for now
@@ -15,37 +16,30 @@ driver = webdriver.Safari()
 
 driver.maximize_window()
 sleep(2)
-driver.get("https://www.google.com")
+driver.get("https://www.amazon.com")
 sleep(2)
 
 title = driver.title
 print(title)
-
-sleep(2)
-ai_btn = driver.find_element(by='xpath', value='//div//span[contains (text(), "AI Mode")]').text
-sleep(2)
-driver.find_element(by='xpath', value='//div//span[contains (text(), "AI Mode")]').click()
-assert 'AI Mode' in ai_btn, 'AI Mode button is not working'
-sleep(2)
-#
-# #getting the dropdown list
-# search_bar = WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.ID, 'searchInput')))
-#
+# # finding element using id
+# driver.find_element(by='xpath', value="//input[@id='twotabsearchtextbox']").send_keys('iphone')
 # sleep(2)
 #
-# #printing the list of names from a dropdown list
-# option_list = driver.find_element(By.XPATH, '//*[@id="search-input"]/div[1]/div')
-# options = option_list.find_elements(By.TAG_NAME, 'option')
-# for option in options:
-#     print(option.text)
+# # finding element using and
+# driver.find_element(by='xpath', value='//input[@id="nav-search-submit-button" and @type="submit"]').click()
+# sleep(2)
 #
-# print('the length count of this list is ', len(options))
-#
-# """
-# Learning finding Elements
-#
-# """
-#
-#
+# # finding element using contains
+# result_output = driver.find_element(by='xpath', value='//h2//span[contains(text(), "iphone")]').text
+# assert 'iphone' in result_output
+# sleep(2)
 
+# running everything with css selectors
+driver.find_element(by='css selector', value='#twotabsearchtextbox').send_keys('iphone')
+
+sleep(2)
+
+driver.find_element(by='css selector', value='span .nav-input.nav-progressive-attribute').click()
+
+sleep(2)
 driver.quit()
