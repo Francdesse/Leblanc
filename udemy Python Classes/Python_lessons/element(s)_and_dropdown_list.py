@@ -7,6 +7,7 @@ from time import sleep
 from selenium.webdriver.common.by import By #allows you to use different locators by seperating them
 from selenium.webdriver.common.keys import Keys #allows you to use keyboard shortcuts
 from selenium.webdriver.support.wait import WebDriverWait
+from selenium.webdriver.common.action_chains import ActionChains
 
 driver = webdriver.Chrome()
 
@@ -40,6 +41,15 @@ driver.find_element(by='css selector', value='#twotabsearchtextbox').send_keys('
 sleep(2)
 
 driver.find_element(by='css selector', value='span .nav-input.nav-progressive-attribute').click()
+
+sleep(2)
+
+# scrolling down the page to click on contact us
+contact_us = driver.find_element(by='xpath', value="//div//a[contains(text(), 'contact us')]")
+action = ActionChains(driver)
+action.scroll_to_element(contact_us).perform()
+sleep(2)
+contact_us.click()
 
 sleep(2)
 driver.quit()
