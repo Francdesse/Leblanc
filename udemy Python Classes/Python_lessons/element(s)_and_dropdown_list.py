@@ -42,14 +42,21 @@ sleep(2)
 
 driver.find_element(by='css selector', value='span .nav-input.nav-progressive-attribute').click()
 
+sleep(4)
+
+driver.find_element(by='xpath',  value='//div//span[contains(text(), "Apple iPhone 14 (Renewed), 128GB, Mi")]').click()
 sleep(2)
 
+get_title = driver.find_element(by='css selector', value='#title #productTitle').text
+assert 'Apple iPhone 14 (Renewed), 128GB, Midnight' in get_title, f'title is not correct, \
+the correct title is {get_title}'
+
 # scrolling down the page to click on contact us
-contact_us = driver.find_element(by='xpath', value="//div//a[contains(text(), 'contact us')]")
-action = ActionChains(driver)
-action.scroll_to_element(contact_us).perform()
-sleep(2)
-contact_us.click()
+# contact_us = driver.find_element(by='xpath', value="//div//a[contains(text(), 'contact us')]")
+# action = ActionChains(driver)
+# action.scroll_to_element(contact_us).perform()
+# sleep(2)
+# contact_us.click()
 
 sleep(2)
 driver.quit()
