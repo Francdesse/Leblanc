@@ -3,4 +3,5 @@ Feature: testing search
     Scenario: 1
         Given user go to amazon
         When search for "iphone"
-        Then iphone is showned in the search HRESULT
+        And clicks on search button
+        Then iphone is showned in the search result
