@@ -9,9 +9,9 @@ def step_impl(self):
     self.driver.get("https://www.amazon.com")
     sleep(5)
 
-@when('search for "iphone"')
-def step_impl(self):
-    self.driver.find_element(By.ID, "twotabsearchtextbox").send_keys("iphone")
+@when('search for {searchText}')#{searchText- is the title name for the search item from the feature file aka "iphone"}
+def step_impl(self,searchText):
+    self.driver.find_element(By.ID, "twotabsearchtextbox").send_keys(searchText)
 
 @when('clicks on search button')
 def user_clicks_on_search_btn(self):
