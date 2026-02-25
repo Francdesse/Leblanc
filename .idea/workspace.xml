@@ -5,10 +5,30 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="95dc32fb-7605-4928-8431-c8f9ade0edb3" name="Changes" comment="test">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/application.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/features/environment.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/features/steps/main_page.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pages/base_page.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pages/main_page.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/features/steps/testing_search.py" beforeDir="false" afterPath="$PROJECT_DIR$/features/steps/testing_search.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/features/test/amazon_search.feature" beforeDir="false" afterPath="$PROJECT_DIR$/features/test/amazon_search.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/selenium/Lession 1.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_file.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/udemy Python Classes/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/udemy Python Classes/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/udemy Python Classes/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/udemy Python Classes/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/udemy Python Classes/.idea/udemy Python Classes.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/udemy Python Classes/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/udemy Python Classes/Python_lessons/Control_flow.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/udemy Python Classes/Python_lessons/DataTypes.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/udemy Python Classes/Python_lessons/Functions.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/udemy Python Classes/Python_lessons/amazon_footer.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/udemy Python Classes/Python_lessons/element(s)_and_dropdown_list.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/udemy Python Classes/Python_lessons/exceptions.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/udemy Python Classes/Python_lessons/secon5_Basics.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/udemy Python Classes/selenium_examples/seleium_Basics.py" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,6 +38,13 @@
   <component name="EmbeddingIndexingInfo">
     <option name="cachedIndexableFilesCount" value="28" />
     <option name="fileBasedEmbeddingIndicesEnabled" value="true" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
@@ -57,31 +84,38 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Behave.amazon_search.feature.executor&quot;: &quot;Run&quot;,
-    &quot;Behave.amazon_search.feature:1.executor&quot;: &quot;Run&quot;,
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;Python.testing_search.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.MCP Project settings loaded&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
-    &quot;ai.playground.ignore.import.keys.banner.in.settings&quot;: &quot;true&quot;,
-    &quot;com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;python2025&quot;,
-    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;,
-    &quot;to.speed.mode.migration.done&quot;: &quot;true&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Behave.amazon_search.feature.executor": "Run",
+    "Behave.amazon_search.feature:1.executor": "Run",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "Python.base_page.executor": "Run",
+    "Python.test_file.executor": "Run",
+    "Python.testing_search.executor": "Run",
+    "RunOnceActivity.MCP Project settings loaded": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "ai.playground.ignore.import.keys.banner.in.settings": "true",
+    "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
+    "git-widget-placeholder": "python2025",
+    "junie.onboarding.icon.badge.shown": "true",
+    "node.js.detected.package.eslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable",
+    "to.speed.mode.migration.done": "true",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
-  <component name="RunManager">
+}]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/pages" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Behave.amazon_search.feature:1">
     <configuration name="amazon_search.feature" type="PyBehaveRunConfigurationType" factoryName="Behave" temporary="true">
       <module name="BDD-practice" />
       <option name="ENV_FILES" value="" />
@@ -139,7 +173,8 @@
       <updated>1770941825542</updated>
       <workItem from="1770941826576" duration="70000" />
       <workItem from="1771548957891" duration="3245000" />
-      <workItem from="1771889502417" duration="2278000" />
+      <workItem from="1771889502417" duration="3081000" />
+      <workItem from="1771976006687" duration="6171000" />
     </task>
     <servers />
   </component>
@@ -169,20 +204,11 @@
       </map>
     </option>
   </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/main.py</url>
-          <line>8</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
-  </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/BDD_practice$testing_search.coverage" NAME="testing_search Coverage Results" MODIFIED="1771550365852" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/features/steps" />
-    <SUITE FILE_PATH="coverage/BDD_practice$amazon_search_feature.coverage" NAME="amazon_search.feature Coverage Results" MODIFIED="1771550399962" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
-    <SUITE FILE_PATH="coverage/BDD_practice$amazon_search_feature_1.coverage" NAME="amazon_search.feature:1 Coverage Results" MODIFIED="1771890950242" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/BDD_practice$base_page.coverage" NAME="base_page Coverage Results" MODIFIED="1771981773905" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/pages" />
+    <SUITE FILE_PATH="coverage/BDD_practice$amazon_search_feature.coverage" NAME="amazon_search.feature Coverage Results" MODIFIED="1771981685030" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/BDD_practice$test_file.coverage" NAME="test_file Coverage Results" MODIFIED="1771899369671" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/BDD_practice$amazon_search_feature_1.coverage" NAME="amazon_search.feature:1 Coverage Results" MODIFIED="1771983253945" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
   </component>
 </project>
