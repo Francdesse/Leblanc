@@ -4,32 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="95dc32fb-7605-4928-8431-c8f9ade0edb3" name="Changes" comment="test">
-      <change afterPath="$PROJECT_DIR$/app/application.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/features/environment.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/features/steps/main_page.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/base_page.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/main_page.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/features/steps/testing_search.py" beforeDir="false" afterPath="$PROJECT_DIR$/features/steps/testing_search.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/selenium/Lession 1.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_file.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/udemy Python Classes/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/udemy Python Classes/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/udemy Python Classes/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/udemy Python Classes/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/udemy Python Classes/.idea/udemy Python Classes.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/udemy Python Classes/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/udemy Python Classes/Python_lessons/Control_flow.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/udemy Python Classes/Python_lessons/DataTypes.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/udemy Python Classes/Python_lessons/Functions.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/udemy Python Classes/Python_lessons/amazon_footer.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/udemy Python Classes/Python_lessons/element(s)_and_dropdown_list.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/udemy Python Classes/Python_lessons/exceptions.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/udemy Python Classes/Python_lessons/secon5_Basics.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/udemy Python Classes/selenium_examples/seleium_Basics.py" beforeDir="false" />
-    </list>
+    <list default="true" id="95dc32fb-7605-4928-8431-c8f9ade0edb3" name="Changes" comment="test" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -174,7 +149,7 @@
       <workItem from="1770941826576" duration="70000" />
       <workItem from="1771548957891" duration="3245000" />
       <workItem from="1771889502417" duration="3081000" />
-      <workItem from="1771976006687" duration="6171000" />
+      <workItem from="1771976006687" duration="6289000" />
     </task>
     <servers />
   </component>

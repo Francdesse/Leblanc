@@ -7,5 +7,13 @@ def user_nav_to_site(context):
 
 
 @when('search for {searchText}')#{searchText- is the title name for the search item from the feature file aka "iphone"}
-def step_impl(context,searchText):
+def step_impl(context, searchText):
     context.app.main_page.user_search_item(searchText)
+
+@when('clicks on search button')
+def user_clicks_on_search_btn(context):
+    context.app.main_page.user_click_search_btn()
+
+@then('{searchText} is showned in the search result')
+def verify_search_item(context, searchText):
+    context.app.main_page.search_item_is_shown(searchText)
