@@ -1,4 +1,6 @@
+from selenium.common import TimeoutException, StaleElementReferenceException
 from selenium.webdriver.common.by import By
+from selenium.webdriver.support import expected_conditions as EC
 from pages.base_page import Page
 from time import sleep
 
@@ -6,7 +8,8 @@ class MainPage(Page):
     SEARCH_FIELD = (By.ID, 'twotabsearchtextbox')
     SEARCH_BTN = (By.ID, "nav-search-submit-button")
     SEARCH_RESULT = (By.XPATH, "//h2//span[contains(text(), 'iphone')]")
-    ITEM_RESULT = (By.CSS_SELECTOR, 'span[data-component-type="types-search-results"], div[class="a-section"] h2')
+    ITEM_RESULT = (By.CSS_SELECTOR, 'span[data-component-type="types-search-results"], div[class="a-section"] h2.a-size-medium.a-spacing-none.a-color-base.a-text-normal')#filter down to 18 products (I need to bring it down to 15)
+                   #'span[data-component-type="types-search-results"], div[class="a-section"] h2') #old path showing 20 items
 
 
 
@@ -26,7 +29,29 @@ class MainPage(Page):
 
     def selecting_third_item_from_search_result(self):
         result = self.driver.find_elements(*self.ITEM_RESULT).count
-        item_title = self.driver.find_elements(*self.ITEM_RESULT)[5].text
+        item_title = self.driver.find_elements(*self.ITEM_RESULT)[3].text
         print(f'Item title: {item_title}')
-        self.driver.find_elements(*self.ITEM_RESULT)[5].click()
+        self.driver.find_elements(*self.ITEM_RESULT)[3].click()
         sleep(15)
+
+    def verify_each_links_are_clickable(self):
+        result = self.driver.find_elements(*self.ITEM_RESULT)
+
+        for item in range(2,len(result)):# its looping through all the items in the search result aka 17x
+            try:
+                element = result[item]
+
+                self.driver.wait.until(EC.element_to_be_clickable(element))#checking if the element is clickable
+                print(f'Item {item} is clickable')
+
+            except TimeoutException:# the exceptions allow you to bypass the exception errors and continue otherwise the code will stop
+                print(f'Item {item} is not clickable (timeout)')
+
+            except StaleElementReferenceException:
+                # DOM changed; re-find elements and retry once if you want
+                print(f'Item {item} became stale (page changed)')
+
+
+
+
+

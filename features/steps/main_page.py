@@ -14,10 +14,14 @@ def step_impl(context, searchText):
 def user_clicks_on_search_btn(context):
     context.app.main_page.user_click_search_btn()
 
+@when('selecting third item from search result')
+def selecting_third_item_from_search_result(context):
+    context.app.main_page.selecting_third_item_from_search_result()
+
 @then('{searchText} is showned in the search result')
 def verify_search_item(context, searchText):
     context.app.main_page.search_item_is_shown(searchText)
 
-@when('selecting third item from search result')
-def selecting_third_item_from_search_result(context):
-    context.app.main_page.selecting_third_item_from_search_result()
+@then('verify each links are clickable')
+def verify_each_links_are_clickable(context):
+    context.app.main_page.verify_each_links_are_clickable()

@@ -13,3 +13,15 @@ Feature: testing search
         And selecting third item from search result
         Then verify that product name is the same as product title
 
+   Scenario: comparing the search title to product title
+        Given user go to amazon
+        When search for iphone
+        And clicks on search button
+        Then verify each links are clickable
+
+     #    Scenario: comparing the search title to product title
+#        Given user go to amazon
+#        When search for iphone
+#        And clicks on search button
+#        And selecting third item from search result
+#        And

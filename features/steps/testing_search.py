@@ -12,7 +12,4 @@ for each item
 Q: how do I store the title from the homepage as a text
 to compare with the product page title?
 
-Homework:
-filter down the path to the only search items from the homepage
-nothing extra
 """
