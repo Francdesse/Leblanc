@@ -52,6 +52,24 @@ class MainPage(Page):
                 print(f'Item {item} became stale (page changed)')
 
 
+    def verify_print_out_each_item_title(self): #I NEED TO FIGURE OUT HOW TO PRINTOUT THE TITLE
+        # result = self.driver.find_elements(*self.ITEM_RESULT)
+        # for item in range(3,len(result)):
+        #     title = self.driver.find_element(*self.ITEM_RESULT).text
+        #      #result[item].text) #how do I get the text to print out?
+        #     print(item, result)
 
+        result = self.driver.find_elements(*self.ITEM_RESULT)
 
+        for item in range(3, len(result)):  # its looping through all the items in the search result aka 17x
+            try:
+                element = result[item]
+                  # checking if the element is clickable
+                print(f'Item {element} is clickable')
 
+            except TimeoutException:  # the exceptions allow you to bypass the exception errors and continue otherwise the code will stop
+                print(f'Item {element} is not clickable (timeout)')
+
+            except StaleElementReferenceException:
+                # DOM changed; re-find elements and retry once if you want
+                print(f'Item {element} became stale (page changed)')

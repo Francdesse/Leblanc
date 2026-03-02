@@ -25,3 +25,7 @@ def verify_search_item(context, searchText):
 @then('verify each links are clickable')
 def verify_each_links_are_clickable(context):
     context.app.main_page.verify_each_links_are_clickable()
+
+@then('verify/print out each item title')
+def verify_print_out_each_item_title(context):
+    context.app.main_page.verify_print_out_each_item_title()
