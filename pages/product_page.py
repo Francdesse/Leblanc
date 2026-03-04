@@ -6,7 +6,7 @@ class ProductPage(Page):
     PRODUCT_TITLE = (By.ID, 'productTitle')
 
 
-    def verify_that_product_name_is_the_same_as_product_title(self):
+    def verify_that_iphone_is_in_the_title(self):
         product_title = self.find_element(*self.PRODUCT_TITLE).text
         print(f'Product title: {product_title}')
         assert 'iPhone 12' in product_title, f'Product title is not the same as {product_title}'

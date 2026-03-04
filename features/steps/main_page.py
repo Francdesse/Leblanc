@@ -29,3 +29,7 @@ def verify_each_links_are_clickable(context):
 @then('verify/print out each item title')
 def verify_print_out_each_item_title(context):
     context.app.main_page.verify_print_out_each_item_title()
+
+@then('verify search title the same as product title')
+def verify_search_title_the_same_as_product_title(context):
+    context.app.main_page.verify_search_title_the_same_as_product_title()

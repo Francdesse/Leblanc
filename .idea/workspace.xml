@@ -4,14 +4,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="95dc32fb-7605-4928-8431-c8f9ade0edb3" name="Changes" comment="test" />
+    <list default="true" id="95dc32fb-7605-4928-8431-c8f9ade0edb3" name="Changes" comment="test">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/features/steps/main_page.py" beforeDir="false" afterPath="$PROJECT_DIR$/features/steps/main_page.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/features/steps/product_page.py" beforeDir="false" afterPath="$PROJECT_DIR$/features/steps/product_page.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/features/test/amazon_search.feature" beforeDir="false" afterPath="$PROJECT_DIR$/features/test/amazon_search.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/main_page.py" beforeDir="false" afterPath="$PROJECT_DIR$/pages/main_page.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/product_page.py" beforeDir="false" afterPath="$PROJECT_DIR$/pages/product_page.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="EmbeddingIndexingInfo">
-    <option name="cachedIndexableFilesCount" value="16" />
+    <option name="cachedIndexableFilesCount" value="18" />
     <option name="fileBasedEmbeddingIndicesEnabled" value="true" />
   </component>
   <component name="FileTemplateManagerImpl">
@@ -63,6 +70,9 @@
   "keyToString": {
     "Behave.amazon_search.feature.executor": "Run",
     "Behave.amazon_search.feature:1.executor": "Run",
+    "Behave.amazon_search.feature:Getting the title for each item 'CHALLENGE.executor": "Run",
+    "Behave.amazon_search.feature:Getting the title for each item.executor": "Run",
+    "Behave.amazon_search.feature:comparing the search title to product title.executor": "Run",
     "Behave.amazon_search.feature:selecting an iphone from search result.executor": "Run",
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "Python.base_page.executor": "Run",
@@ -91,7 +101,7 @@
       <recent name="$PROJECT_DIR$/pages" />
     </key>
   </component>
-  <component name="RunManager" selected="Behave.amazon_search.feature:selecting an iphone from search result">
+  <component name="RunManager" selected="Behave.amazon_search.feature">
     <configuration name="amazon_search.feature" type="PyBehaveRunConfigurationType" factoryName="Behave" temporary="true">
       <module name="BDD-practice" />
       <option name="ENV_FILES" value="" />
@@ -108,7 +118,7 @@
       <option name="ADDITIONAL_ARGS" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="amazon_search.feature:1" type="PyBehaveRunConfigurationType" factoryName="Behave" temporary="true">
+    <configuration name="amazon_search.feature:Getting the title for each item 'CHALLENGE" type="PyBehaveRunConfigurationType" factoryName="Behave" temporary="true">
       <module name="BDD-practice" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -121,7 +131,41 @@
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="RUN_TOOL" value="" />
       <WHAT_TO_RUN WHAT_TO_RUN="$PROJECT_DIR$/features/test/amazon_search.feature" />
-      <SCENRAIO_NAMES SCENRAIO_NAMES="1" />
+      <SCENRAIO_NAMES SCENRAIO_NAMES="Getting the title for each item 'CHALLENGE" />
+      <option name="ADDITIONAL_ARGS" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="amazon_search.feature:Getting the title for each item" type="PyBehaveRunConfigurationType" factoryName="Behave" temporary="true">
+      <module name="BDD-practice" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="RUN_TOOL" value="" />
+      <WHAT_TO_RUN WHAT_TO_RUN="$PROJECT_DIR$/features/test/amazon_search.feature" />
+      <SCENRAIO_NAMES SCENRAIO_NAMES="Getting the title for each item" />
+      <option name="ADDITIONAL_ARGS" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="amazon_search.feature:comparing the search title to product title" type="PyBehaveRunConfigurationType" factoryName="Behave" temporary="true">
+      <module name="BDD-practice" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="RUN_TOOL" value="" />
+      <WHAT_TO_RUN WHAT_TO_RUN="$PROJECT_DIR$/features/test/amazon_search.feature" />
+      <SCENRAIO_NAMES SCENRAIO_NAMES="comparing the search title to product title" />
       <option name="ADDITIONAL_ARGS" value="" />
       <method v="2" />
     </configuration>
@@ -144,9 +188,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Behave.amazon_search.feature:selecting an iphone from search result" />
-        <item itemvalue="Behave.amazon_search.feature:1" />
         <item itemvalue="Behave.amazon_search.feature" />
+        <item itemvalue="Behave.amazon_search.feature:comparing the search title to product title" />
+        <item itemvalue="Behave.amazon_search.feature:Getting the title for each item 'CHALLENGE" />
+        <item itemvalue="Behave.amazon_search.feature:Getting the title for each item" />
+        <item itemvalue="Behave.amazon_search.feature:selecting an iphone from search result" />
       </list>
     </recent_temporary>
   </component>
@@ -171,6 +217,9 @@
       <workItem from="1771976006687" duration="6289000" />
       <workItem from="1772067987773" duration="4439000" />
       <workItem from="1772149033659" duration="6436000" />
+      <workItem from="1772386574207" duration="15179000" />
+      <workItem from="1772494668467" duration="2037000" />
+      <workItem from="1772579025368" duration="7844000" />
     </task>
     <servers />
   </component>
@@ -201,10 +250,13 @@
     </option>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/BDD_practice$amazon_search_feature_Getting_the_title_for_each_item__CHALLENGE.coverage" NAME="amazon_search.feature:Getting the title for each item 'CHALLENGE Coverage Results" MODIFIED="1772581557617" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/BDD_practice$amazon_search_feature_comparing_the_search_title_to_product_title.coverage" NAME="amazon_search.feature:comparing the search title to product title Coverage Results" MODIFIED="1772586850301" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
     <SUITE FILE_PATH="coverage/BDD_practice$testing_search.coverage" NAME="testing_search Coverage Results" MODIFIED="1771550365852" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/features/steps" />
     <SUITE FILE_PATH="coverage/BDD_practice$base_page.coverage" NAME="base_page Coverage Results" MODIFIED="1771981773905" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/pages" />
-    <SUITE FILE_PATH="coverage/BDD_practice$amazon_search_feature_selecting_an_iphone_from_search_result.coverage" NAME="amazon_search.feature:selecting an iphone from search result Coverage Results" MODIFIED="1772157035264" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
-    <SUITE FILE_PATH="coverage/BDD_practice$amazon_search_feature.coverage" NAME="amazon_search.feature Coverage Results" MODIFIED="1771981685030" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/BDD_practice$amazon_search_feature_selecting_an_iphone_from_search_result.coverage" NAME="amazon_search.feature:selecting an iphone from search result Coverage Results" MODIFIED="1772392732275" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/BDD_practice$amazon_search_feature.coverage" NAME="amazon_search.feature Coverage Results" MODIFIED="1772587006435" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/BDD_practice$amazon_search_feature_Getting_the_title_for_each_item.coverage" NAME="amazon_search.feature:Getting the title for each item Coverage Results" MODIFIED="1772408636746" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
     <SUITE FILE_PATH="coverage/BDD_practice$test_file.coverage" NAME="test_file Coverage Results" MODIFIED="1771899369671" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/BDD_practice$amazon_search_feature_1.coverage" NAME="amazon_search.feature:1 Coverage Results" MODIFIED="1772073028386" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
   </component>
