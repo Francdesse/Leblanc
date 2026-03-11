@@ -13,7 +13,7 @@ class MainPage(Page):
     ITEM_RESULT = (By.CSS_SELECTOR, 'span[data-component-type="types-search-results"], div[class="a-section"] h2.a-size-medium.a-spacing-none.a-color-base.a-text-normal')#filter down to 18 products (I need to bring it down to 15)
                    #'span[data-component-type="types-search-results"], div[class="a-section"] h2') #old path showing 20 items
     PRODUCT_TITLE = (By.ID, 'productTitle')
-
+    CART = (By.ID, 'nav-cart-count-container')
 
     def user_nav_to_site(self):
         self.open_url("https://www.amazon.com")
@@ -88,3 +88,6 @@ class MainPage(Page):
 
             # Wait until you're really back on results page before next loop
             self.wait.until(EC.presence_of_all_elements_located(self.ITEM_RESULT))
+
+    def user_clicks_on_cart(self):
+        self.wait.until(EC.visibility_of_element_located(self.CART)).click()

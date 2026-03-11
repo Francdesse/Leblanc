@@ -31,7 +31,11 @@ Feature: testing search
         And clicks on search button
         Then verify search title the same as product title
 
+  Scenario: verify that when user clicks on cart, it shows empty cart
+        Given user go to amazon
+        When user clicks on cart
+        Then verify cart is empty
+
   Scenario: verify user is able to add item to cart
   Scenario: verify the item added to cart has the same title as search item
   Scenario: verify that when an item is added to cart 1 is shown on cart
-  Scenario: verify that when user clicks on cart, it shows empty cart

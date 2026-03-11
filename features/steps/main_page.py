@@ -18,6 +18,10 @@ def user_clicks_on_search_btn(context):
 def selecting_third_item_from_search_result(context):
     context.app.main_page.selecting_third_item_from_search_result()
 
+@when('user clicks on cart')
+def user_clicks_on_cart(context):
+    context.app.main_page.user_clicks_on_cart()
+
 @then('{searchText} is showned in the search result')
 def verify_search_item(context, searchText):
     context.app.main_page.search_item_is_shown(searchText)
@@ -33,3 +37,5 @@ def verify_print_out_each_item_title(context):
 @then('verify search title the same as product title')
 def verify_search_title_the_same_as_product_title(context):
     context.app.main_page.verify_search_title_the_same_as_product_title()
+
+
