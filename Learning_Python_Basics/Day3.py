@@ -1,6 +1,6 @@
 
 
-str = "Welcome to the promise land"
+# str = "Welcome to the promise land"
 
 # print(str)
 # print(str[0])
