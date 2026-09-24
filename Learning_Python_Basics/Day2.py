@@ -13,8 +13,11 @@
 # print('The sum is equal to', sum)
 
 
-#Working with functions
-def test(joke):
-    return 'This is a test '+joke
+def hbd_song(name, age):
+    print(f"Happy Birthday to you {name} you are now {age} years old")
+    print('its a special day for you')
+    print() 
 
-print(test("Yo Mama"))
+hbd_song("Natalie", 39)
+hbd_song("Eli", 55)
+hbd_song("Josh", 99)
