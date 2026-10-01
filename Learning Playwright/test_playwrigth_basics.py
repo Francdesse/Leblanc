@@ -57,3 +57,18 @@ def test_adding_item_to_cart(page:Page):
 #     prd_page_title = page.locator("#title #productTitle").text_content()
 #     # assert title == "Apple iPhone 14, 128GB, Midnight - Unlocked (Renewed)"
 #     assert prd_page_title == "Apple iPhone 14, 128GB, Midnight - Unlocked (Renewed)"
+
+# working with a new window
+def test_new_window_popup(page:Page):
+    page.goto("https://www.amazon.com/")
+    sleep(2)
+    page.locator("#icp-touch-link-country .icp-color-base").click()
+    sleep(2)
+    page.get_by_role("button", name="Go to website").click()
+
+    with page.expect_popup() as new_page_info:
+        childPage = new_page_info.value
+        recommendation_text = childPage.locator('.rhf-sign-in-title').text_content()
+        assert "personalized" in recommendation_text
+        childPage.close()
+        sleep(5)
