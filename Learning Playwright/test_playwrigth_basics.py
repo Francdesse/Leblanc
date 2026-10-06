@@ -72,3 +72,41 @@ def test_new_window_popup(page:Page):
         assert "personalized" in recommendation_text
         childPage.close()
         sleep(5)
+
+# going to the sign in page using 'Sign in' popup box link
+def test_sign_in_page(page:Page):
+    page.goto("https://www.amazon.com/")
+    sleep(2)
+    page.locator('#nav-signin-tooltip .nav-action-inner').click()
+    sleep(2)
+    title = page.locator("#claim-collection-container h1").text_content()
+    answer = title.split("or")
+    assert "Sign in" in answer[0]
+
+#working with tables
+#goal is to assert the price is equal to 37
+#identify the price colunm
+#identify the rice row
+#extract the price of the rice
+def test_verify_price_of_rice(page:Page):
+    page.goto('https://rahulshettyacademy.com/seleniumPractise/#/offers')
+    sleep(2)
+    col= page.locator("th").count()
+
+    for i in range(col):
+        # if page.locator("th").nth(i).text_content() == "Price" and page.locator("th").nth(i).count() >0:
+        if page.locator("th").nth(i).filter(has_text="Price").count() > 0:
+            col_value = i
+            print(f'col_value: {col_value}')
+            # if col_value == 39:
+            #     item_name = page.locator("tr)").nth(col_value).text_content()
+            #     print(f'item_name: {item_name}')
+            #     assert item_name == "Potato"
+            break
+        else:
+            print('not found')
+
+    item_name = page.locator("tr").filter(has_text="Rice")
+    # print(f'item_name: {item_name}')
+    assert item_name == "Rice"
+#Question: can I do everything inside the if statement then break???
