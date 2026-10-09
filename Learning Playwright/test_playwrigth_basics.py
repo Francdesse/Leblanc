@@ -1,6 +1,6 @@
 from os import link
 
-from playwright.sync_api import Page
+from playwright.sync_api import Page, expect
 from time import sleep
 
 #This the steps to run it headless but --header allows me to visually see whats happening in the code
@@ -91,22 +91,72 @@ def test_sign_in_page(page:Page):
 def test_verify_price_of_rice(page:Page):
     page.goto('https://rahulshettyacademy.com/seleniumPractise/#/offers')
     sleep(2)
-    col= page.locator("th").count()
+
+    # for i in range(page.locator("th").count()):
+    #     if page.locator("th").nth(i).filter(has_text="Price").count() > 0:
+    #         col_value = i;
+    #         print(f'col_value: {col_value}')
+    #         break
+    #
+    # riceRow = page.locator("tr").filter(has_text="Rice")
+    # expect(riceRow.locator("td").nth(col_value)).to_have_text("39")
+
+    col= page.locator("th").count() #the 3 columns
 
     for i in range(col):
-        # if page.locator("th").nth(i).text_content() == "Price" and page.locator("th").nth(i).count() >0:
-        if page.locator("th").nth(i).filter(has_text="Price").count() > 0:
+         if page.locator("th").nth(i).text_content() == "Price" and page.locator("th").nth(i).count() >0:
+        # if page.locator("th").nth(i).filter(has_text="Price").count() > 0:#focus only on price column and nth(i) allows
+            #me to access the th index(this is a simpler way to write line 107)
             col_value = i
             print(f'col_value: {col_value}')
-            # if col_value == 39:
-            #     item_name = page.locator("tr)").nth(col_value).text_content()
-            #     print(f'item_name: {item_name}')
-            #     assert item_name == "Potato"
+            item_name = page.locator("tr").filter(has_text="Rice")
+            expect(item_name.locator("td").nth(col_value)).to_have_text("37")
             break
-        else:
-            print('not found')
 
-    item_name = page.locator("tr").filter(has_text="Rice")
-    # print(f'item_name: {item_name}')
-    assert item_name == "Rice"
-#Question: can I do everything inside the if statement then break???
+
+#     item_name = page.locator("tr").filter(has_text="Rice")
+#     expect(item_name.locator("td").nth(col_value)).to_have_text("37")
+# # Question: can I do everything inside the if statement then break???
+
+# #working with tables
+# #goal is to assert the price is equal to 34
+# #identify the price colunm
+# #identify the potato row
+# #extract the price of the potato
+# def test_verify_price_of_rice(page:Page):
+#     page.goto('https://rahulshettyacademy.com/seleniumPractise/#/offers')
+#     sleep(2)
+#
+#     col= page.locator("th").count() #the 3 columns
+#
+#     for i in range(col):
+#          if page.locator("th").nth(i).text_content() == "Price" and page.locator("th").nth(i).count() >0:
+#         # if page.locator("th").nth(i).filter(has_text="Price").count() > 0:#focus only on price column and nth(i) allows
+#             #me to access the th index(this is a simpler way to write line 107)
+#             col_value = i
+#             print(f'col_value: {col_value}')
+#             item_name = page.locator("tr").filter(has_text="Potato")
+#             expect(item_name.locator("td").nth(col_value)).to_have_text("34")
+#             break
+
+
+#working with tables
+#goal is to assert the price is equal to 34
+#identify the Discount price colunm
+#identify the potato row
+#extract the discount price of the potato
+def test_verify_price_of_rice(page:Page):
+    page.goto('https://rahulshettyacademy.com/seleniumPractise/#/offers')
+    sleep(2)
+
+    col= page.locator("th").count() #the 3 columns
+
+    for i in range(col):
+         if page.locator("th").nth(i).text_content() == "Discount price" and page.locator("th").nth(i).count() >0:
+        # if page.locator("th").nth(i).filter(has_text="Price").count() > 0:#focus only on price column and nth(i) allows
+            #me to access the th index(this is a simpler way to write line 107)
+            col_value = i
+            print(f'col_value: {col_value}')
+            item_name = page.locator("tr").filter(has_text="Potato")
+            expect(item_name.locator("td").nth(col_value)).to_have_text("22")#expect 22
+            break
