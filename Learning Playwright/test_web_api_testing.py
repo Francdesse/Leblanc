@@ -35,7 +35,7 @@ def test_start_page(playwright:Playwright):
     # sleep(2)
     page.locator('.btnn.action__submit.ng-star-inserted').click()
     sleep(2)
-
+ 
     #order confirmation
     order_confirmation = page.get_by_text("Thank you, your order has been placed successfully.")
     assert order_confirmation
