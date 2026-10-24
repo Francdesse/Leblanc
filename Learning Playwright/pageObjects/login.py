@@ -1,3 +1,6 @@
+from .dashboard import DashboardPage
+from time import sleep
+
 class LoginPage:
 
     def __init__(self,page):
@@ -10,4 +13,6 @@ class LoginPage:
         self.page.locator('#userEmail').fill("rahulshetty33@gmail.com")
         self.page.locator("#userPassword").fill("Password123$$")
         self.page.get_by_role("button", name="Login").click()
-        self.page.sleep(3)
+        sleep(3)
+        dashboardPage = DashboardPage(self.page)
+        return dashboardPage

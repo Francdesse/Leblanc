@@ -1,5 +1,7 @@
 from playwright.sync_api import Playwright, Page, expect
 from pageObjects.login import LoginPage #connecting the login page to the login test section
+from pageObjects.dashboard import DashboardPage
+from pageObjects.cart import CartPage
 from utils.apiBase import APIUtils
 from time import sleep
 
@@ -19,35 +21,17 @@ def test_start_page(playwright:Playwright):
     #login to main page
     loginPage = LoginPage(page)
     loginPage.UrlNavigate()
+    dashboardPage = loginPage.login()
 
     # adding Item to cart
     #grabbing the text
-    item_tile = page.get_by_text("ADIDAS ORIGINAL").text_content()
-    page.locator('#products > div.container > div.row > div:nth-child(1) > div > div > button.btn.w-10.rounded').click()
-    sleep(5)
-    page.locator("button.btn-custom[routerlink='/dashboard/cart']").click()
-    sleep(2)
-    cart_item = page.locator(".cartSection h3").text_content()
-    assert item_tile == cart_item
-    sleep(2)
+    cartPage = dashboardPage.addingItemtoCart()
 
     #checking out
-    page.get_by_role("button", name="Checkout").click()
-    sleep(2)
-    page.locator('.form-group .input.txt.text-validated').fill("United States")
-    # page.get_by_role("button", name="United States").click()
-    # sleep(2)
-    page.locator('.btnn.action__submit.ng-star-inserted').click()
-    sleep(2)
+    cartPage.checkingOutitem()
 
     #order confirmation
-    order_confirmation = page.get_by_text("Thank you, your order has been placed successfully.")
-    assert order_confirmation
-    sleep(5)
-
-    #verifying order# by comparing order number and api order number
-    page.get_by_role("button", name="ORDERS").click()
-    sleep(2)
+    cartPage.orderConfirmationMsg()
 
     #verify order id
 
