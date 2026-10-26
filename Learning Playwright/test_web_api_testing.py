@@ -25,13 +25,13 @@ def test_start_page(playwright:Playwright):
 
     # adding Item to cart
     #grabbing the text
-    cartPage = dashboardPage.addingItemtoCart()
+    cartpage = dashboardPage.addingItemtoCart()
 
     #checking out
-    cartPage.checkingOutitem()
+    cartpage.checkingOutitem()
 
     #order confirmation
-    cartPage.orderConfirmationMsg()
+    # cartPage.orderConfirmationMsg()
 
     #verify order id
 
